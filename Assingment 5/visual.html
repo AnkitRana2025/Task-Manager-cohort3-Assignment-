@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<section class="render-flow">
+
+  <h2>How Browser Renders a Webpage</h2>
+
+  <div class="flow-container">
+
+    <div class="progress-line"></div>
+
+    <div class="step" data-info="HTML is the structure of webpage">
+      HTML
+    </div>
+
+    <div class="step" data-info="Browser reads code line by line">
+      Parsing
+    </div>
+
+    <div class="step" data-info="Code is converted into tokens">
+      Tokenization
+    </div>
+
+    <div class="step" data-info="DOM Tree is created from HTML">
+      DOM Tree
+    </div>
+
+    <div class="step" data-info="CSS is parsed by browser">
+      CSS
+    </div>
+
+    <div class="step" data-info="CSSOM Tree is created">
+      CSSOM Tree
+    </div>
+
+    <div class="step" data-info="DOM + CSSOM combine together">
+      DOM + CSSOM
+    </div>
+
+    <div class="step final" data-info="Final render tree is created">
+      Render Tree
+    </div>
+
+  </div>
+
+  <div class="info-box">
+    Click any step to see details
+  </div>
+
+</section>
+<script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+/* ---------------- DARK MODE COLORS ---------------- */
+body.dark-mode {
+  background-color: #161d26; 
+  color: #f5f6f7; 
+}
+
+
+body.dark-mode .form-container, 
+body.dark-mode .filter,
+body.dark-mode form, 
+body.dark-mode .task-board {
+  background-color: #1f2733;
+  border: 1px solid #2d3748;
+}
+
+/* Inputs & Date Field */
+body.dark-mode .inp1, 
+body.dark-mode #date {
+  background-color: #121820;
+  border: 1px solid #2d3748;
+  color: #ffffff;
+}
+body.dark-mode .inp1::placeholder {
+  color: #4a5568;
+}
+
+/* Individual Task Card */
+body.dark-mode .tasks {
+  background-color: #1e2640; /* Dark bluish tint for cards */
+  border: 1px solid #2d3b5a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .tasks h2 {
+  color: #ffffff;
+}
+
+/* Icons and Text Colors Inside Tasks */
+body.dark-mode .time p,
+body.dark-mode .time i {
+  color: #a0aec0 !important; 
+}
+body.dark-mode #theme-toggle {
+  color: #f6e05e; 
+}
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+button{
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+button:hover{
+  transform: scale(1.05);
+}
+header{
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #5760D8;
+  align-items: center;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+.logo i{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.icon{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+}
+.icon a{
+  text-decoration: none;
+  font-size: large;
+  color: white;
+}
+.icon i{
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+.icon i:hover{
+  background-color: #6E75E9;
+  border-radius: 20px;
+}
+form{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 15px 25px;
+  margin: 20px 0px 0px 0px;
+  width: 95%;
+  background-color: #FAF9FC;
+  border: 1px solid #9b9b9c;
+  border-radius: 10px;
+}
+input:focus{
+  outline: none;
+  border: 2px solid #9b9b9c;
+}
+form input{
+  padding: 15px 25px;
+  border: 1px solid #9b9b9c;
+  border-radius: 10px;
+}
+form input::placeholder{
+  color: #9b9b9c;
+}
+input[type="date"]::-webkit-calendar-picker-indicator{
+  filter: grayscale(1) opacity(0.6);
+}
+.inp1{
+  padding-right: 12rem;
+}
+form button{
+  padding: 10px 25px;
+  border: none;
+  background-color: #5760D8;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+}
+.task-board{
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 95%;
+  padding: 10px 20px ;
+  height: 80%;
+  border: 1px solid #9b9b9c;
+  border-radius: 10px;
+  margin: 20px 0px 0px 0px;
+}
+.tasks{
+  margin: 20px 0px 0px 0px;
+  padding: 10px 25px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FAF9FC;
+  border: 1px solid #9b9b9c;
+  border-radius: 10px;
+}
+.time{
+  display: flex;
+  gap: 10px;
+}
+.btns{
+  width: 25%;
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  padding: 10px 25px;
+}
+.btns button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+.edit{
+  background-color: #5760D8;
+  color: white;
+  font-weight: bold;
+}
+.delete{
+  background-color: rgb(250, 37, 37);
+  color: white;
+  font-weight: bold;
+}
+.complete{
+  background-color: rgb(61, 159, 61);
+  color: white;
+  font-weight: bold;
+}
+.completed-msg{
+  color: #31b057;
+  font-weight: 600;
+}
+.filter-box{
+  margin: 20px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 95%;
+  padding: 10px 25px;
+  border: 1px solid #9b9b9c;
+  border-radius: 10px;
+}
+.filter{
+  display: flex;
+  gap: 30px;
+}
+.filter button{
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+.bedge1{
+  background-color: #636bda8f;
+  border: 2px solid #5760D8;
+  color: #5760D8;
+  font-weight: bold;
+}
+.bedge2{
+  background-color: rgba(65, 160, 65, 0.642);
+  border: 2px solid green;
+  color: rgb(1, 100, 1);
+  font-weight: bold;
+}
+.bedge3{
+  background-color: rgba(218, 165, 32, 0.509);
+  border: 2px solid goldenrod;
+  color: rgb(156, 117, 18);
+  font-weight: bold;
+}
+.reset button{
+  padding: 10px 20px;
+  border: 2px solid red;
+  border-radius: 10px;
+  color: rgb(249, 5, 5);
+  background-color: rgba(203, 56, 56, 0.692);
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+@media (max-width: 1024px) {
+
+  form {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .inp1 {
+    padding-right: 5rem;
+  }
+
+  .btns {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  .inp1 {
+    padding-right: 1rem;
+  }
+
+  .filter-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .filter {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tasks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .btns {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  header {
+    padding: 10px;
+  }
+
+  .logo i {
+    font-size: 1.5rem;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  .tasks {
+    padding: 10px;
+  }
+
+  .btns button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .filter button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .reset button {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">
+        <i class="ri-todo-line"></i>
+        <h1>Task Manager</h1>
+        </div>
+        <div class="icon">
+          <i class="ri-moon-line" id="theme-toggle" style="cursor: pointer;"></i>
+          <a href="visual.html">Visual explainition</a>
+        </div>
+      </header>
+      <form>
+        <input type="text" placeholder="what do you need to do?" class="inp1" required>
+        <input type="date" style="color: #9b9b9c;" id="date" required>
+        <button type="submit" id="btn1">Add Task <span style="padding-left: 20px;">+</span></button>
+      </form>
+      <div class="filter-box">
+      <div class="filter">
+        <button class="bedge1" data-filter="all">All</button>
+        <button class="bedge2" data-filter="completed">Complete</button>
+        <button class="bedge3" data-filter="pending">Pending</button>
+      </div>
+      <div class="reset">
+        <button id="resetBtn">Reset Task</button>
+      </div>
+      </div>
+      <div class="task-board">
+       <h1>Your Tasks</h1>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
